@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --AlmostWhite: hsl(0, 0%, 98%);
+   --MediumGray: hsl(0, 0%, 41%);
+   --AlmostBlack: hsl(0, 0%, 8%);
+   }
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--AlmostWhite);
+    width: 100%;
+    height: 86px;
+}
+.logo{
+    align-items: center;
+    display: flex;
+    padding-inline: 2rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    
+}
+.navbar-item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+
+}
+.navbar-item .item{
+padding: 15px;
+
+}
+.navbar-item .item a{
+    text-decoration: none;
+    color: var(--MediumGray);
+
+}
+.navbar-item .menu{
+list-style: none;
+position: absolute;
+display: flex;
+flex-direction: column;
+line-height: 40px;
+box-shadow: 5px 10px 15px rgb(0,0,0,0.2);
+left: -2rem;
+top: 2rem;
+border-radius: 20px;
+padding: 10px;
+display: none;
+background: var(--AlmostWhite);
+}
+
+/* .item:hover .menu{
+    display: block;
+} */
+.item:hover .up{
+    transform: rotate(180deg);
+    transition: 1s all;
+}
+.navbar-item .menus{
+    list-style: none;
+position: absolute;
+display: flex;
+flex-direction: column;
+line-height: 40px;
+box-shadow: 5px 10px 15px rgb(0,0,0,0.2);
+left: 6rem;
+width: 100px;
+text-align: center;
+border-radius: 20px;
+padding: 10px;
+display: none;
+background: var(--AlmostWhite);
+
+}
+/* .item:nth-child(2):hover .menus{
+    display: block;
+} */
+.navbar-item .menu.active{
+    display: block;
+}
+.navbar-item .menus.active{
+    display: block;
+}
+.navbar-item .menu li{
+    padding: 5px;
+    align-items: center;
+    display: flex;
+}
+.navbar-item .menu img{
+    margin-right: 10px;
+    align-items: center;
+}
+
+
+.login button{
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    
+}
+.login{
+    padding-inline: 3rem;
+}
+.login .register{
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+
+
+.hamburger{
+    cursor: pointer;
+    display: none;
+    
+}
+.hamburger .bar{
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 5px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   background-color: black;
+   position: relative;
+   right: 2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; 
+    padding-inline: 3rem;   
+}
+.left h1{
+    font-size: 70px;
+}
+.left p{
+    width: 400px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.right img{
+    width: 400px;
+}
+.right{
+    margin-top: 10px;
+}
+
+.buttons button{
+    padding: 11px 20px;
+    background: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.buttons{
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+   
+}
+.buttons:active{
+    transform: scale(0.9);
+}
+
+
+
+
+
+@media(max-width:800px){
+    .navbar-item{
+        position: absolute;
+        display: block;
+        right: 0;
+        background: var(--AlmostWhite);
+        top: 85px;
+        height: 100vh;
+        width: auto;
+        display: none;
+    }
+    .navbar-item .menu{
+        position: relative;
+        left: -1rem;
+        top: 1rem;
+    }
+    .navbar-item .menus{
+        left: -1rem;
+        position: relative;
+        width: 120px;
+    height: 25vh;
+    }
+    .register{
+        display: flex;
+    flex-direction: column;
+    }
+    .hamburger{
+        display: block;
+        
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .open{
+        display: block;
+    }
+    .right{
+        background: url(./image-hero-mobile.png);
+        width: 600px;
+        height: 300px;
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .right .imgs{
+        display: none;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    .footer{
+     
+    }
+   
+}

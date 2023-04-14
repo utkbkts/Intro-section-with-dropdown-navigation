@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+   
+<nav>
+    <div class="logo">
+        <img src="./logo.svg" alt="">
+    </div>
+    <div class="navbar">
+        <ul class="navbar-item">
+            <li class="item">
+                <a href="#" class="items">
+                    Features <img class="up" src="./icon-arrow-down.svg" alt="">
+                </a>
+                <ul class="menu">
+                    <li>
+                        <p>
+                            <span><img src="./icon-todo.svg" alt="">Todo List</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span><img src="./icon-calendar.svg" alt="">calendar</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span><img src="./icon-reminders.svg" alt="">reminders</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span><img src="./icon-planning.svg" alt="">planning</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+           <li class="item item2">
+            <a href="#" class="items">
+                company <img class="up" src="./icon-arrow-down.svg" alt="">
+            </a>
+            <ul class="menus">
+                <li>
+                    <p>
+                        <span>History</span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>Our Team</span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>Blog</span>
+                    </p>
+                </li>
+            </ul>
+           </li>
+           <li class="item">
+            <a href="#">Careers</a>
+           </li>
+           <li class="item">
+            <a href="#">About</a>
+           </li>
+            <div class="login">
+                <button>Login</button>
+                <button class="register">Register</button>
+            </div>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+    
+<main>
+    <div class="container">
+        <div class="left">
+            <h1>Make <br> remote work</h1>
+            <br>
+            <p>Get your team in sync. no matter your location Streamline processes. create team rituals,and watch produtivity soar.</p>
+            <br>
+            <div class="buttons">
+                <button>Learn More</button>
+            </div>
+            <br>
+            <div class="footer">
+                <img src="./client-databiz.svg" alt="">
+                <img src="./client-audiophile.svg" alt="">
+                <img src="./client-meet.svg" alt="">
+                <img src="./client-maker.svg" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <img class="imgs" src="./image-hero-desktop.png" alt="">
+        </div>
+    </div>
+</main>
+
+
+
+<script>
+
+    const item = document.querySelector(".item")
+    const menu = document.querySelector(".menu")
+    const item2 = document.querySelector(".item2")
+    const menu2 = document.querySelector(".menus")
+    const hamburger = document.querySelector(".hamburger")
+    const navbar = document.querySelector(".navbar-item")
+    const items = document.querySelectorAll(".item").forEach(n=> n.addEventListener("click",()=>{
+        hamburger.classList.remove("active")
+        navbar.classList.remove("active")
+    }))
+    
+    item.addEventListener("click",()=>{
+        item.classList.toggle("active")
+        menu.classList.toggle("active")
+    })
+    item2.addEventListener("click",()=>{
+        item2.classList.toggle("active")
+        menu2.classList.toggle("active")
+    })
+    hamburger.addEventListener("click",()=>{
+        hamburger.classList.toggle("open")
+        navbar.classList.toggle("open")
+    })
+
+</script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
